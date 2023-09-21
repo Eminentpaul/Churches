@@ -1,0 +1,62 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+
+{% block content %}
+            
+    <!--  ************************* Page Title Starts Here ************************** -->
+     <div class="page-nav no-margin row">
+            <div class="container">
+                <div class="row">
+                    <h2 class="text-start">About Us</h2>
+                    <ul>
+                        <li> <a href="#"><i class="bi bi-house-door"></i> Home</a></li>
+                        <li><i class="bi bi-chevron-double-right pe-2"></i> About Us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+           
+           
+           
+    <!--####################### About US Starts Here ###################-->
+    
+    
+    <section class="team bg-gray big-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h2>Meet our team</h2>
+                        <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                
+                {% for artist in artists %}
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="team-main-box bg-white shadow-md text-center">
+                            <img src="{{artist.image.url}}">
+                            <div class="team-content-box">
+                                <ul>
+                                    <li><i class="fab fa-facebook-f"></i></li>
+                                    <li><i class="fab fa-twitter"></i></li>
+                                    <li><i class="fab fa-instagram"></i></li>
+                                </ul>
+                                <a href="{% url 'artist' artist.id %}" class="nav-link">
+                                    <h3 class="fw-bolder mt-3 fs-4 mb-0">{{artist.name}}</h3>
+                                </a>
+                                <p class="pb-3">{{artist.country}}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+    {% endblock %}

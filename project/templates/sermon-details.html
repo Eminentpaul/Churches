@@ -1,0 +1,142 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+
+{% block content %}
+             
+    <!--  ************************* Home Slider Start Here ************************** -->
+    <div class="slider container-fluid">
+        <div class="slider-inner big-padding">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="imgsc text-center mb-5">
+                        <img class="sw-100" src="{% static 'assets/images/slider/boog.png' %}" alt="">
+                    </div>
+                   
+                    <h1 class="text-white"><div id="typewriteText"></div> Make the World More Peaceful</h1>
+                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa lacus, feugiat vel velit id, vehicula accumsan nisi </p>
+                    <button class="btn shadow-md btn-outline-light mt-4">Get Connected</button>
+                </div>
+            </div>
+        </div>
+    </div>
+           
+           
+    <!--####################### About US Starts Here ###################-->
+    <div class="about-outline">
+        <div class="container-fluid big-padding about-cover">
+            <div class="container">
+                <div class="row about-row">
+                    <div class="col-md-5 ps-0 ps-lg-5 no-padding image">
+                        <img src="{{sermon.image.url}}" alt="">
+                    </div>
+                    <div class="col-md-7 detailat text-justify">
+                        <h1 class="fw-bold text-uppercase">Title: {{sermon.title}}</h1>
+                        <h3 class="text-uppercase">Hosted By: {{sermon.post}} {{sermon.host}}</h3>
+                        <h3>Posted On: {{sermon.updated|timesince}} ago</h3>
+                        <p>{{sermon.description}}</p>
+                        
+                    </div>
+
+                    <div class="p-3">
+                        <h4 class="fw-bold">{{song.title}}</h4>
+                        <p class="fst-italic fw-bolder">SERMON AUDIO </p>
+                        <audio controls style="max-width: 100%;"
+                            src="{% if sermon.audio_file %} {{sermon.audio_file.url}} {% endif %} {% if sermon.audio_link %} {{sermon.audio_link.url}} {% endif %}"></audio>
+                        <a href="#" class="nav-link">Add to My Favourites</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    
+    <!-- <section class="team bg-gray big-padding mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h2>The List of Albums</h2>
+                        <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                {% for album in albums %}
+                        <div class="col-lg-3 mb-4 col-md-4 col-sm-6 col-6">
+                            <a href="{% url 'album' album.id %}" class="nav-link">
+                                <div class="team-main-box bg-white shadow-md text-center">
+                                    <img src="{{album.image.url}}">
+                                    <div class="team-content-box">
+                                        <ul>
+                                            <li><i class="fab fa-facebook-f"></i></li>
+                                            <li><i class="fab fa-twitter"></i></li>
+                                            <li><i class="fab fa-instagram"></i></li>
+                                        </ul>
+                                        <h3 class="fw-bolder mt-3 fs-4 mb-0">{{album.title}}</h3>
+                                        <a href="#" class="nav-link">
+                                            <p class="pb-3">{{album.artist}}</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>  -->
+
+<!--####################### Blo Starts Here ###################-->
+
+
+<!--####################### Our Team Starts Here ###################-->
+
+    <!--####################### Sermon Starts Here ###################-->
+    
+        <!-- <div class="container-fluid big-padding">
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="section-title text-start row">
+                            <h2 class="text-start">Latest sermons and events</h2>
+                            <p class="text-dark text-start">Lorem ipsum dolor sit amet eiusmod tempor incididunt</p>
+                        </div>
+                        <div class="row">
+                            {% for sermon in sermons %}
+                                <div class="col-md-6 mb-4">
+                                    <div class="sermon-cover">
+                                        <img class="rounded" src="{{sermon.image.url}}" alt="">
+                                
+                                        <h4 class="mb-0 mt-4 text-dark fw-bold fs-5">{{sermon.title}}</h4>
+                                        <p class="fst-italic">{{sermon.updated|timesince}} ago | By: <span class="text-uppercase">{{sermon.post}} {{sermon.host}}</span></p>
+                                
+                                        <p class="mt-2">{{sermon.description|truncatechars:150}}</p> <a href="#" class="btn btn-outline-danger">Read More</a>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="section-title text-start row">
+                            <h2 class="text-start">Testimonies </h2>
+                            <p class="text-dark text-start">Lorem ipsum dolor sit amet incididunt</p>
+                        </div>
+                        {% for testimony in testimonies %}
+                            <div class="row m-0 mb-4">
+                                <h4 class="mb-0 text-dark fw-bold fs-5">By: {{testimony.name}}</h4>
+                                <p class="fst-italic mb-2">Posted: {{testimony.created|timesince}} ago</p>
+                                <p>{{testimony.description|truncatechars:150}}</p> <a href="#" class="btn btn-outline-danger">Read More</a>
+                            </div>
+
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    
+{% endblock %}

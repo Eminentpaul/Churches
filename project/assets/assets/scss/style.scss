@@ -1,0 +1,217 @@
+/* =======================================================================
+Template Name: Youtubers
+Author:  SmartEye Technologies
+Author URI: www.smarteyeapps.com
+Version: 1.0
+coder name:Prabin Raja
+Description: This Template is created for Youtubers
+======================================================================= */
+
+/* ===================================== Import Variables ================================== */
+@import 'variable';
+/* ===================================== Basic CSS ==================================== */
+@import 'base/basic_setup';
+
+/* ===================================== Basic CSS ==================================== */
+@import 'base/bootstrap';
+
+
+.max-230{
+    max-width: 230px;
+}
+
+.leftlist{
+    li{
+        padding: 10px;
+    }
+}
+.nacul{
+    li{
+        a{
+            font-size: 1rem;
+        }
+    }
+}
+.scroll-to-fixed-fixed{
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+
+
+
+
+
+
+footer{
+   
+    .inner{
+        background-color: rgba(0,0,0,0.7);
+        @include big-padding();
+        color: #ccc;
+        font-size: .9rem;
+        h4{
+            color: #FFF;
+           
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+        .foot-about{
+            p{
+                margin-bottom: 30px;
+            }
+        }
+        .foot-post{
+            .post-row{
+                display: flex;
+                margin-bottom: 10px;
+                .image{
+                     
+                    img{
+                       width: 120px;
+                    }
+                }
+                .detail{
+                    flex-grow: 1;
+                    padding-left: 5px;
+                    
+                    p{
+                        font-size: .8rem;
+                        margin-top: -5px;
+                    }
+                }
+            }
+        }
+        .foot-services{
+            ul{
+                li{
+                    padding: 5px;
+                    font-size: .95rem;
+                    a{
+                        color: #ccc;
+                    }
+                }
+            }
+        }
+        .foot-news{
+            p{
+               margin-bottom: 20px; 
+            }
+            .input-group{
+                border-radius: 0px;
+                input{
+                    border-radius: 0px;
+                }
+                .input-group-append{
+                    border-radius: 0px;
+                    background-color: #FFF;
+                }
+            }
+            ul{
+                li{
+                    float: left;
+                    padding: 10px;
+                    i{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.copy{
+        padding: 20px;
+        background-color: #000000;
+        color: #FFF;
+    a{
+        color: #FFF;
+    }
+    span{
+        float: right;
+        i{
+            margin-right: 20px;
+        }
+    }
+}
+
+.slider{
+    background-image: url(../images/slider/banner_01.jpg);
+    .slider-inner{
+        background-color: rgba(0, 0, 0, 0.5);
+       
+        width: 100%;
+        height: 100%;
+        padding-top: 190px;
+        padding-bottom: 190px;
+        @media screen and (max-width: 767px){
+            padding-top: 120px;
+            padding-bottom: 120px;
+            h1{
+                font-size: 2.5rem;
+            }
+        }
+        h1{
+            font-size: 3.5rem;
+            font-weight: 600;
+            @media screen and (max-width: 767px){
+                font-size: 2.5rem;
+            }
+        }
+        .btn{
+            max-width: 250px;
+            margin: auto;
+            background: rgba(255,255,255,0.15);
+            &:hover{
+                background-color: #dd3333;
+                color: #FFF;
+            }
+            border: 0;
+        }
+    }
+   
+}
+.sw-100{
+    width: 90px !important;
+}
+
+.detailat{
+    p{
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        text-indent: 15px;
+    }
+}
+.about-outline{
+    background-image: url(../images/desk.jpg);
+    .about-cover{
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+      
+    }
+}
+.blog-outline{
+    background-image: url(../images/blog-bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    transform: translate3d(0px, 62.1031px, 0px);
+}
+.sermon-cover{
+    img{
+        box-shadow: 0px 15px 150px 0px rgba(0,0,0,0.6);
+    }
+}
+.nacul{
+    @media screen and (max-width: 767px){
+        width: 100%;
+        margin-top: -10px;
+    }
+    li{
+        @media screen and (max-width: 767px){
+            float: none !important;
+        }
+    }
+}
